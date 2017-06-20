@@ -1,0 +1,146 @@
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="page-title">
+            用户编辑
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="index.html">首页</a>
+                <span class="icon-angle-right"></span>
+            </li>
+            <li>
+                <a href="#/user">用户列表</a>
+                <span class="icon-angle-right"></span>
+            </li>
+            <li><a href="javascript:;">用户编辑</a></li>
+        </ul>
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-reorder"></i>数据编辑</div>
+            </div>
+            <div class="portlet-body form">
+                <!-- BEGIN FORM-->
+                <form action="" class="form-horizontal" id="shops_form">
+                    <div class="control-group">
+
+                        <label class="control-label">用户昵称</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtname" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">用户名称</label>
+
+                        <div class="controls">
+
+                            <input type="text" name="name" class="span8 m-wrap" id="txtusername" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">密码</label>
+
+                        <div class="controls">
+
+                            <input type="password" class="span8 m-wrap" id="txtpwd" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">权限设定</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input type="checkbox" value="wechat" name="chkisrec"/>
+                                粉丝管理
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="checkbox" value="demand" name="chkisrec"/>
+                                需求单管理
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="grad" name="chkisrec"/>
+                                抢单管理
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="banner" name="chkisrec"/>
+                                轮播图管理
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="checkbox" value="shops" name="chkisrec"/>
+                                店铺管理
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="goods" name="chkisrec"/>
+                                商品管理
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="checkbox" value="applywithdrawals" name="chkisrec"/>
+                                提现申请
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" value="withdrawcash" name="chkisrec"/>
+                                支付提现
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="checkbox" value="suggest" name="chkisrec"/>
+                                客户反馈
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="checkbox" value="user" name="chkisrec"/>
+                                用户管理
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn blue" id="btnOK">保 存</button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn black" id="btnCancel">取 消</button>
+                    </div>
+                </form>
+                <!-- END FORM-->
+            </div>
+        </div>
+        <!-- END SAMPLE FORM PORTLET-->
+    </div>
+</div>
+<!-- END PAGE CONTENT-->
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="media/js/app.js"></script>
+<script src="media/js/admin/useredit.js"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+    jQuery(document).ready(function () {
+        // initiate layout and plugins
+        App.editinit();
+    });
+</script>

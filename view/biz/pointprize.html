@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>积分领奖</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="media/css/bind.css" type="text/css" rel="stylesheet"/>
+    <script src="media/js/jquery-1.9.1.min.js"></script>
+    <script src="media/js/common.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $comm.ajax({
+                        "url": "/shake/findpointprize?openid=" + $comm.getparam("openid"),
+                        "type": "get"
+                    },
+                    function (err, result) {
+                        if (!err) {
+                            var prizecontent = "";
+                            $.each(JSON.parse(result.msg.replace(/'/g, "\"")), function (name, value) {
+                                prizecontent += ' <li data-name="cellphone" data-type="IsShow" style="float: left"><div style="float: left; margin-right: 10px;"><input type="radio" name="pradio" v=' + JSON.stringify(value) + ' style="height: 120px"></div>';
+                                prizecontent += '        <div style="float: left;margin-right: 10px;"><img src="http://120.26.123.23:88/uploads/' + value.img + '" width="120px"';
+                                prizecontent += '  height="120px"/></div>';
+                                prizecontent += '  <div style="height: 120px;line-height: 30px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">';
+                                prizecontent += '          奖品名称：' + value.name + '<br>需要积分：' + value.rate + '<br>备注：' + value.remark;
+                                prizecontent += '  </div></li>';
+                            })
+                            $("#pul").append(prizecontent);
+                        }
+                    })
+
+            $("#submit").click(function () {
+                var _value = JSON.parse($("input[name='pradio']:checked").attr("v"));
+
+                $comm.ajax({
+                            "url": "/point/exchange",
+                            "type": "post",
+                            "data": {"openid": $comm.getparam("openid"), "prizeinnerid": "",
+                                "prizeid": _value.id, "prizeurl": _value.img, "prizeremark": _value.remark,
+                                "prizesource": _value.rate, "prizename": _value.name}
+                        },
+                        function (err, result) {
+                            if (err) {
+                                alert("对不起，兑换失败，请稍后再试")
+                            } else {
+                                if (result.msg == "201") {
+                                    alert("对不起，您的积分不够")
+                                }
+                                if (result.msg == "200") {
+                                    alert("恭喜您，兑换成功")
+                                }
+                            }
+                        });
+            })
+        })
+    </script>
+</head>
+<body class="fontCh bbody">
+<div class="header">
+    积分兑换
+</div>
+<div class="main">
+    <ul id="pul">
+        <li>&nbsp;</li>
+    </ul>
+    <ul>
+        <li>
+            <label class="error" id="errorMsg"></label>
+        </li>
+    </ul>
+</div>
+<div class="footer">
+    <button id="submit" class="btnsubmit">兑 换</button>
+</div>
+<span class="help-block" style="color: cornflowerblue">本次活动限定微信粉丝用户，最终解释权归迈车酷所有；</span>
+</body>
+</html>

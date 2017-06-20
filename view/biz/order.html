@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="media/css/media-queries.css" type="text/css" rel="stylesheet"/>
+    <link href="media/css/register.css" type="text/css" rel="stylesheet"/>
+    <script src="media/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+    <script src="media/js/common.js" type="text/javascript"></script>
+
+    <script src="media/plugin/mobiscroll-2.5.2/dev/js/mobiscroll.core-2.5.2.js" type="text/javascript"></script>
+
+    <link href="media/plugin/mobiscroll-2.5.2/dev/css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css"/>
+    <link href="media/plugin/mobiscroll-2.5.2/dev/css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css"/>
+
+    <script src="media/plugin/mobiscroll-2.5.2/dev/js/mobiscroll.datetime-2.5.1.js" type="text/javascript"></script>
+    <script src="media/plugin/mobiscroll-2.5.2/dev/js/mobiscroll.datetime-2.5.1-zh.js" type="text/javascript"></script>
+
+    <script src="media/plugin/mobiscroll-2.5.2/dev/js/mobiscroll.android-ics-2.5.2.js" type="text/javascript"></script>
+    <link href="media/plugin/mobiscroll-2.5.2/dev/css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet"
+          type="text/css"/>
+    <script src="media/js/order.js" type="text/javascript"></script>
+    <title>在线预约</title>
+
+</head>
+<body class="fontCh bbody">
+<div class="header">
+    用户预约
+</div>
+<div class="main">
+    <ul>
+        <li><span>姓名:</span><input type="text" id="txtname" style="width: 50%"/>先生/女士</li>
+        <li><span>电话:</span><input type="text" id="txtTel"/></li>
+        <li><span>车牌:</span><input type="text" id="txtcp"/></li>
+        <li><span>车型:</span><input type="text" id="txtxh"/></li>
+        <li><span>预约门店:</span><select id="selStore" style="width: 150px;">
+            <option id="春申湖路店">春申湖路店</option>
+        </select></li>
+        <li><span>预约类型:</span><select id="type" onchange="selectChange(this.value)" style="width: 150px;">
+            <option>洗车</option>
+            <option>美容</option>
+            <option>保养</option>
+            <option>维修</option>
+            <option>喷漆</option>
+            <option>验车</option>
+            <option>协助处理事故</option>
+        </select></li>
+        <li><span>预约日期:</span><input type="text" id="txtdate"/></li>
+        <li id="LIPayType"><span>支付类型:</span><select id="SelPayType"
+                                                     style="width: 150px;">
+            <option value="现金">现金</option>
+            <option value="洗车卡">洗车卡</option>
+            <option value="洗车券">洗车券</option>
+            <option value="免费洗车券">免费洗车券</option>
+            <option value="会员卡">会员卡</option>
+        </select></li>
+        <li><span>上门提车:</span><input type="checkbox" id="chktiche"></li>
+        <li id="liaddr" style="display: none;"><span>提车地址:</span><input type="text" id="txtaddr"/></li>
+        <li><span>备注:</span><input type="text" id="txtremark" style="color: #CDBA96; font-style: italic;"/></li>
+        <li>
+            <label class="error">
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="footer">
+    <button id="submit" class="btnsubmit">
+        预约
+    </button>
+</div>
+</body>
+</html>

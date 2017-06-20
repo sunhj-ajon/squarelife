@@ -1,0 +1,208 @@
+<style>
+    .cover {
+        width: 200px;
+        height: 150px;
+        border: 1px solid #EEEEEE;
+        position: absolute;
+        text-align: center;
+        line-height: 150px;
+        color: #B7B4B4;
+        font-size: 20px;
+    }
+</style>
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="page-title">
+            商铺编辑
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="index.html">首页</a>
+                <span class="icon-angle-right"></span>
+            </li>
+            <li>
+                <a href="#/shops">商铺列表</a>
+                <span class="icon-angle-right"></span>
+            </li>
+            <li><a href="javascript:;">商铺编辑</a></li>
+        </ul>
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-reorder"></i>数据编辑</div>
+            </div>
+            <div class="portlet-body form">
+                <!-- BEGIN FORM-->
+                <form action="" class="form-horizontal" id="shops_form">
+
+                    <div class="control-group">
+
+                        <label class="control-label">商铺封面</label>
+
+                        <div class="controls" style="position: static;">
+
+                            <div id="divcover" class="cover">
+                                <img id="divcover_img" style="width: 200px;height: 150px;display: none">
+                                <span id="span_text">上传图片</span>
+                            </div>
+                            <input type="file" id="file_upload"
+                                   style="opacity:0;width: 200px;height: 150px;cursor: pointer;">
+                            <label style="color: red;font-size: 12px;">建议尺寸：200*150</label>
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商铺名称</label>
+
+                        <div class="controls">
+
+                            <input type="text" name="name" class="span8 m-wrap" id="txtname" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商铺联系人</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtcontacts" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商铺联系人电话</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtmobile" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商铺电话</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txttel">
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商铺地址</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtaddr" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商铺介绍</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtintro">
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商铺排序</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtsort">
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">商铺经纬度</label>
+
+                        <div class="controls">
+                            经度：<input type="text" class="span2 m-wrap" id="txtlongitude_j">
+                            纬度：<input type="text" class="span2 m-wrap" id="txtlongitude_w">
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">是否为推荐商铺</label>
+                        <div class="controls">
+                            <label class="radio">
+                                <input type="radio" value=1 name="rdoisrec"/>
+                                是
+                            </label>
+                            <label class="radio">
+                                <input type="radio" value=0 name="rdoisrec" checked/>
+                                否
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">商铺类型</label>
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txttype">
+
+                            <span class="help-inline"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn blue" id="btnOK">保 存</button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn black" id="btnCancel">取 消</button>
+                    </div>
+                </form>
+                <!-- END FORM-->
+            </div>
+        </div>
+        <!-- END SAMPLE FORM PORTLET-->
+    </div>
+</div>
+<!-- END PAGE CONTENT-->
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="media/js/app.js"></script>
+<script src="media/js/admin/shopsedit.js"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+    jQuery(document).ready(function () {
+        // initiate layout and plugins
+        App.editinit();
+    });
+</script>

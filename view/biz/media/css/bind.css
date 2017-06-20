@@ -1,0 +1,297 @@
+﻿html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, select, legend, input, button, textarea, p, blockquote, th, td, tbody {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+body {
+    padding: 0px;
+    background-color: #fff;
+    color: #464e4c;
+    font-size: 100%;
+    margin: 0;
+}
+
+.fontCh {
+    font-family: 'Microsoft YaHei';
+}
+
+.fontEn {
+    font-family: 'Microsoft PhagsPa';
+}
+
+.error {
+    color: red;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+/*模版一*/
+.gbody {
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#fff,endColorStr=rgb(211,233,234)); /*IE6*/
+    background: -moz-linear-gradient(top,#fff,rgb(211,233,234)); /*非IE6的其它*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(rgb(211,233,234))); /*chrome*/
+    padding: 0 5%;
+}
+
+    .gbody a {
+        color: #1e9596;
+        text-decoration: none;
+    }
+
+    .gbody input, .gbody select {
+        color: rgb(24,149,150);
+        font-size: 1em;
+        background-color: rgb(238,238,238);
+    }
+
+    .gbody select {
+        width: 60px;
+        height: 30px;
+    }
+
+    .gbody .header {
+        font-size: 2em;
+        text-align: left;
+        color: rgb(24,149,150);
+        line-height: 2.5em;
+        width: 100%;
+    }
+
+    .gbody .main li span {
+        display: block;
+        text-align: left;
+        width: 100%;
+        line-height: 3em;
+    }
+
+    .gbody .main li input[type=text] {
+        display: block;
+        text-align: left;
+        width: 100%;
+        height: 30px;
+        border: 1px solid rgb(24,149,150);
+    }
+
+    .gbody .main li span.sexsp {
+        display: inline-block;
+        text-align: left;
+        width: 70px;
+        height: 40px;
+        line-height: 2.5em;
+        border: 1px solid rgb(24,149,150);
+        text-align: center;
+        color: rgb(24,149,150);
+        cursor: pointer;
+    }
+
+    .gbody .main li input[type=checkbox] {
+        border: 1px solid rgb(24,149,150);
+    }
+
+    .gbody .footer {
+        padding: 20px 0;
+    }
+
+        .gbody .footer button {
+            width: 90px;
+            height: 40px;
+            border: none;
+            font-weight: bolder;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .gbody .footer .btnsubmit {
+            color: #fff;
+            background-color: #1e9596;
+        }
+
+        .gbody .footer .btnreset {
+            color: #d1d1d1;
+            background-color: #fff;
+        }
+
+/*模版二*/
+.bbody {
+    background: rgb(243,243,243);
+    /*background:url(guess-m.png) no-repeat;*/
+    padding: 0 5%;
+}
+
+    .bbody a {
+        color: #1e9596;
+        text-decoration: none;
+    }
+
+    .bbody .header {
+        font-size: 2em;
+        text-align: left;
+        color: #3ab5da;
+        line-height: 2em;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .bbody input[type=text] {
+        font-size: 1em;
+        border: none;
+        text-indent: 4px;
+        width: 72%;
+        height: 30px;
+        color: #464e4c;
+        font-family: 'Microsoft YaHei';
+        border-bottom: #d1d1d1 solid 1px;
+        background-color: rgb(243,243,243);
+    }
+
+    .bbody select {
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+    }
+
+    .bbody input[type=radio] {
+        display: inline-block;
+    }
+
+    .bbody .main li label {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    .bbody .main li span {
+        display: inline-block;
+        text-align: left;
+        width: 28%;
+        line-height: 4em;
+    }
+
+
+
+    .bbody .footer {
+        padding: 20px 0;
+    }
+
+        .bbody .footer .btnsubmit {
+            background-color: #34b7de;
+            width: 100%;
+            border: none;
+            height: 2em;
+            color: #fff;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+/*模版三*/
+.rbody {
+    background: rgb(239,239,239);
+    padding: 0 5%;
+}
+
+    .rbody a {
+        color: #f00;
+        text-decoration: none;
+    }
+
+    .rbody .header {
+        font-size: 2em;
+        font-weight: bolder;
+        text-align: center;
+        color: rgb(204,0,0);
+        line-height: 2em;
+        width: 100%;
+    }
+
+    .rbody .main {
+        background: #fff;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+        padding-left: 4px;
+    }
+
+    .rbody input[type=text] {
+        font-size: 1em;
+        border: none;
+        width: 75%;
+        height: 30px;
+        color: #464e4c;
+        font-family: 'Microsoft YaHei';
+    }
+
+    .rbody select {
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+    }
+
+    .rbody input[type=radio] {
+        display: inline-block;
+    }
+
+    .rbody .main li {
+        border-bottom: 1px solid #d1d1d1;
+    }
+
+        .rbody .main li.lastli {
+            border-bottom: none;
+        }
+
+        .rbody .main li label {
+            display: inline-block;
+            line-height: 3em;
+            margin-right: 20px;
+        }
+
+        .rbody .main li span {
+            display: inline-block;
+            text-align: left;
+            width: 25%;
+            line-height: 4em;
+            color: #000;
+            font-weight: bold;
+        }
+
+    .rbody .footer {
+        padding: 20px 0;
+    }
+
+        .rbody .footer label {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .rbody .footer .btnsubmit {
+            background: url(registration-ios_bg.png) repeat-x;
+            width: 100%;
+            border: none;
+            height: 2em;
+            color: #fff;
+            font-size: 1.5em;
+            cursor: pointer;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
+
+.fontEn .main li span {
+    width: 30%;
+}
+
+.fontEn input[type=text] {
+    width: 70%;
+}
+
+.fontAll .main li span {
+    width:40%;
+}
+
+.fontAll input[type=text] {
+    width: 60%;
+}

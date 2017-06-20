@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>欢乐大转盘</title>
+    <link rel="stylesheet" type="text/css" href="media/css/lottery.css"/>
+</head>
+<body style="background: #FFD3D4;">
+<h1 class="keTitle">超级大转盘--欢乐无极限</h1>
+
+<div class="kePublic">
+    <div id="lottery">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="lottery-unit lottery-unit-0"></td>
+                <td class="lottery-unit lottery-unit-1"></td>
+                <td class="lottery-unit lottery-unit-2"></td>
+                <td class="lottery-unit lottery-unit-3"></td>
+            </tr>
+            <tr>
+                <td class="lottery-unit lottery-unit-11"></td>
+                <td colspan="2" rowspan="2"><a href="#"></a></td>
+                <td class="lottery-unit lottery-unit-4"></td>
+            </tr>
+            <tr>
+                <td class="lottery-unit lottery-unit-10"></td>
+                <td class="lottery-unit lottery-unit-5"></td>
+            </tr>
+            <tr>
+                <td class="lottery-unit lottery-unit-9"></td>
+                <td class="lottery-unit lottery-unit-8"></td>
+                <td class="lottery-unit lottery-unit-7"></td>
+                <td class="lottery-unit lottery-unit-6"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="media/js/jquery-1.9.1.min.js"></script>
+    <script src="media/js/common.js" type="text/javascript"></script>
+    <script src="media/js/lottery.js" type="text/javascript"></script>
+
+    <div class="clear"></div>
+</div>
+
+<div class="keBottom">
+    <div style="float: left;width: 55%">
+        <h1 style="font-size: 40px;">奖品:</h1>
+
+        <div>
+            <ul id="prizeDoc" style="margin-left: 30px; margin-top: 20px;">
+            </ul>
+            <span style="color: red; font-size: 18px;">本次活动限定微信粉丝用户，最终解释权归迈车酷所有；</span>
+        </div>
+    </div>
+    <div style="float: right; width: 42%;height: 400px">
+        <h1 style="font-size: 40px;text-align: left">中奖名单:</h1>
+
+        <marquee style="margin-top: 20px; margin-bottom: 20px;height: 400px" direction="up">
+            <ul id="prizeuser" style="margin-left: 30px;">
+            </ul>
+        </marquee>
+    </div>
+</div>
+
+<div id="popDiv" class="mydiv" style="display:none;">很遗憾！<br/>异常错误，请关闭重新打开<br/>
+    <!--<a href="javascript:closeDiv()">关闭窗口</a>-->
+</div>
+<div id="bg" class="bg" style="display:none;"></div>
+
+</body>
+</html>

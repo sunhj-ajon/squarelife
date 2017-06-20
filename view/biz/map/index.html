@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>驾车导航</title>
+    <script src="http://api.map.baidu.com/api?v=1.2"></script>
+</head>
+<body>
+<div id="container" style="width:680px;height:1180px"></div>
+<div id="panel"></div>
+<script>
+    var map = new BMap.Map('container');
+    map.centerAndZoom(new BMap.Point(120.664294,31.388925), 15);
+
+    var driving = new BMap.DrivingRoute(map, {
+        onSearchComplete: function (results) {
+            if (driving.getStatus() == BMAP_STATUS_SUCCESS) {
+                // 地图覆盖物
+                addOverlays(results);
+                // 方案描述
+                addText(results);
+            }
+        }
+    });
+
+//    driving.search('圆明园', '西单');
+//
+//    // 添加覆盖物并设置视野
+//    function addOverlays(results) {
+//        // 自行添加起点和终点
+//        var start = results.getStart();
+//        var end = results.getEnd();
+//        addStart(start.point, start.title);
+//        addEnd(end.point, end.title);
+//        var viewPoints = [start.point, end.point];
+//        // 获取方案
+//        var plan = results.getPlan(0);
+//        // 获取方案中包含的路线
+//        for (var i = 0; i < plan.getNumRoutes(); i++) {
+//            addRoute(plan.getRoute(i).getPath());
+//            viewPoints.concat(plan.getRoute(i).getPath());
+//        }
+//        // 设置地图视野
+//        map.setViewport(viewPoints, {
+//            margins: [40, 10, 10, 10]
+//        });
+//    }
+//
+//    // 添加方案描述
+//    function addText(results) {
+//        var plan = results.getPlan(0);
+//        // 获取方案中包含的路线
+//        var htmls = [];
+//        for (var i = 0; i < plan.getNumRoutes(); i++) {
+//            var route = plan.getRoute(i);
+//            for (var j = 0; j < route.getNumSteps(); j++) {
+//                var curStep = route.getStep(j);
+//                htmls.push((j + 1) + '. ' + curStep.getDescription() + '<br />');
+//            }
+//        }
+//        var panel = document.getElementById('panel');
+//        panel.innerHTML = htmls.join('');
+//        panel.style.lineHeight = '1.4em';
+//        panel.style.fontSize = '12px';
+//    }
+//
+//    // 添加起点覆盖物
+//    function addStart(point, title) {
+//        map.addOverlay(new BMap.Marker(point, {
+//            title: title,
+//            icon: new BMap.Icon('blue.png', new BMap.Size(38, 41), {
+//                anchor: new BMap.Size(4, 36)
+//            })}));
+//    }
+//
+//    // 添加终点覆盖物
+//    function addEnd(point, title) {
+//        map.addOverlay(new BMap.Marker(point, {
+//            title: title,
+//            icon: new BMap.Icon('red.png', new BMap.Size(38, 41), {
+//                anchor: new BMap.Size(4, 36)
+//            })}));
+//    }
+//
+//    // 添加路线
+//    function addRoute(path) {
+//        map.addOverlay(new BMap.Polyline(path, {
+//            strokeColor: '#333',
+//            enableClicking: false
+//        }));
+//    }
+</script>
+</body>
+</html>

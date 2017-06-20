@@ -1,0 +1,175 @@
+<style>
+    .cover {
+        width: 200px;
+        height: 150px;
+        border: 1px solid #EEEEEE;
+        position: absolute;
+        text-align: center;
+        line-height: 150px;
+        color: #B7B4B4;
+        font-size: 20px;
+    }
+</style>
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="page-title">
+            商品编辑
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="index.html">首页</a>
+                <span class="icon-angle-right"></span>
+            </li>
+            <li>
+                <a href="#/goods">商品列表</a>
+                <span class="icon-angle-right"></span>
+            </li>
+            <li><a href="javascript:;">商品编辑</a></li>
+        </ul>
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-reorder"></i>数据编辑</div>
+            </div>
+            <div class="portlet-body form">
+                <!-- BEGIN FORM-->
+                <form action="" class="form-horizontal" id="shops_form">
+
+                    <div class="control-group">
+
+                        <label class="control-label">商品封面</label>
+
+                        <div class="controls" style="position: static;">
+
+                            <div id="divcover" class="cover">
+                                <img id="divcover_img" style="width: 200px;height: 150px;display: none">
+                                <span id="span_text">上传图片</span>
+                            </div>
+                            <input type="file" id="file_upload"
+                                   style="opacity:0;width: 200px;height: 150px;cursor: pointer;">
+                            <label style="color: red;font-size: 12px;">建议尺寸：200*150</label>
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">所属店铺</label>
+
+                        <div class="controls">
+                            <select class="large m-wrap" tabindex="1" id="sel_shop">
+                            </select>
+
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商品名称</label>
+
+                        <div class="controls">
+
+                            <input type="text" name="name" class="span8 m-wrap" id="txtname" placeholder="请输入商品名称" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">原始价格</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtoldprice" placeholder="请输入原始价格（金额类型,格式：290.12,小数最多精确两位）" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">优惠价格</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtrebateprice" placeholder="请输入优惠价格（金额类型,格式：290.12,小数最多精确两位）" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">库存</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtstocknum" placeholder="请输入库存（数字类型,格式：290.12,小数最多精确两位）">
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">单位</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtunit" placeholder="请输入商品计量单位" required>
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+
+                        <label class="control-label">商品介绍</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="span8 m-wrap" id="txtintro" placeholder="请输入商品介绍">
+
+                            <span class="help-inline"></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn blue" id="btnOK">保 存</button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn black" id="btnCancel">取 消</button>
+                    </div>
+                </form>
+                <!-- END FORM-->
+            </div>
+        </div>
+        <!-- END SAMPLE FORM PORTLET-->
+    </div>
+</div>
+<!-- END PAGE CONTENT-->
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="media/js/app.js"></script>
+<script src="media/js/admin/goodsedit.js"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+    jQuery(document).ready(function () {
+        // initiate layout and plugins
+        App.editinit();
+    });
+</script>

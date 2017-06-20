@@ -1,0 +1,151 @@
+<link rel="stylesheet" type="text/css" href="media/css/select2_metro.css"/>
+
+<link rel="stylesheet" href="media/css/DT_bootstrap.css"/>
+
+<script type="text/javascript" src="media/js/select2.min.js"></script>
+
+<script type="text/javascript" src="media/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="media/js/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="media/js/admin/banner.js"></script>
+
+<style>
+    .wrap {
+            height: 300px;
+            width: 400px;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .wrap ul#pic li {
+            float: left;
+            width: 99%;
+            display: block;
+            border: 1px #ccc solid;
+            text-align: center;
+        }
+
+        .wrap ul#pic .btn-danger {
+            position: absolute;
+            right: 78px;
+            top: 0px;
+        }
+
+        .wrap ul#pic li img {
+            width: 220px;
+            height: 180px;
+            padding: 44px 0px;
+        }
+
+        .wrap ul#list {
+            position: absolute;
+            right: 5px;
+            bottom: 13px;
+    left: 100px;
+        }
+
+        .wrap ul#list li {
+            height: 20px;
+            width: 20px;
+            background: #ccc;
+            border: solid 1px #666;
+            margin-left: 5px;
+            color: #000;
+            float: left;
+            line-height: center;
+            text-align: center;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .wrap ul#list .on {
+            background: #E97305;
+            color: #fff;
+        }
+
+        .wrap .fileInput {
+            left: 26px;
+            height: 30px;
+            line-height: 30px;
+            top: 0;
+            width: 40px;
+        }
+        #pic li{position: relative}
+</style>
+<script>
+
+    jQuery(document).ready(function () {
+
+        banner.init();
+
+    });
+
+</script>
+
+<div class="row-fluid">
+    <div class="span12">
+        <h3 class="page-title">
+            轮播图管理
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="#/index">首页</a>
+                <i class="icon-angle-right"></i>
+            </li>
+            <li><a href="javascript:;">轮播图管理</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-edit"></i>轮播图列表</div>
+            </div>
+            <div class="portlet-body" style="position:relative">
+                <a class="btn btn-primary" data-toggle="modal" style="position:absolute;right:10px;">
+                     <i class="icon-plus icon-white"></i>
+                </a>
+                <input id="file_upload" type="file" style="opacity:0;position:absolute;right:10px;width:39px;">
+                <div class="wrap" id='swiper'>
+                    <div class="swiperlist" style="margin-top: 1rem">
+                        <ul id="pic">
+                        </ul>
+                        <ul id="list">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row-fluid" style="padding-left:26px;margin:auto;max-width: 640px">
+                    <p style="color:#666666">*图片建议尺寸(宽*高)：220px * 180px</p>
+                </div>
+                <div class="row-fluid" style="padding-left:26px;margin: 36px auto;max-width: 640px">
+                    <div class="span6">
+                        <label class="span12 control-label" for="formGroupInputLarge">轮播名称</label>
+
+                        <div class="span12">
+                            <input class="form-control" id="txttitle" type="text" maxlength="45" placeholder="请输入轮播图名称"/>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <label class="span12 control-label" for="formGroupInputLarge">链接地址</label>
+                        <div class="span12">
+                            <input class="form-control" id="txtaddress" type="text" maxlength="600" placeholder="请输入地址"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid" style="padding-left:26px;margin:auto;max-width: 640px">
+                    <div class="span6">
+                        <button type="button" id="btnsubmit" class="btn btn-primary btn-lg col-sm-12">
+                            &nbsp;保&nbsp;存&nbsp;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>

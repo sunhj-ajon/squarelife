@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js" ng-app="indexapp"> <![endif]-->
+
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js" ng-app="indexapp"> <![endif]-->
+
+<!--[if !IE]><!-->
+<html lang="en" class="no-js" ng-app="indexapp"> <!--<![endif]-->
+
+<!-- BEGIN HEAD -->
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>方碑联帮智能系统</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+    <meta content="" name="description"/>
+
+    <meta content="" name="author"/>
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+    <link href="media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+    <link href="media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+
+    <link href="media/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/daterangepicker.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/fullcalendar.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/jqvmap.css" rel="stylesheet" type="text/css" media="screen"/>
+
+    <link href="media/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+
+    <!-- END PAGE LEVEL STYLES -->
+
+    <!--<link rel="shortcut icon" href="media/image/favicon.ico"/>-->
+
+</head>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class="page-header-fixed">
+
+<!-- BEGIN HEADER -->
+
+<div class="header navbar navbar-inverse navbar-fixed-top">
+
+    <!-- BEGIN TOP NAVIGATION BAR -->
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid">
+
+            <!-- BEGIN LOGO -->
+
+            <a class="brand" href="index.html">
+                <span style="margin-left: 20px;font-size: 16px;color: white;letter-spacing:2px;"> 方碑联帮智能系统 </span>
+                <!--<img src="media/image/logo.png" alt="logo"/>-->
+
+            </a>
+
+            <!-- END LOGO -->
+
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+
+            <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+
+                <img src="media/image/menu-toggler.png" alt=""/>
+
+            </a>
+
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <ul class="nav pull-right">
+                <a href="login.html" style="color: white;line-height: 40px;height: 40px;cursor: pointer">登 出</a>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- END TOP NAVIGATION BAR -->
+
+</div>
+
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+
+<div class="page-container">
+
+    <!-- BEGIN SIDEBAR -->
+
+    <div class="page-sidebar nav-collapse collapse">
+
+        <!-- BEGIN SIDEBAR MENU -->
+
+        <ul class="page-sidebar-menu">
+
+            <li>
+
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+                <div class="sidebar-toggler hidden-phone"></div>
+
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+            </li>
+
+            <li>
+
+                <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+
+                <!--<form class="sidebar-search">-->
+
+                <!--<div class="input-box">-->
+
+                <!--<a href="javascript:;" class="remove"></a>-->
+
+                <!--<input type="text" placeholder="搜索..."/>-->
+
+                <!--<input type="button" class="submit" value=" "/>-->
+
+                <!--</div>-->
+
+                <!--</form>-->
+
+                <!-- END RESPONSIVE QUICK SEARCH FORM -->
+
+            </li>
+
+            <li class="start active ">
+
+                <a href="#/doshborad">
+
+                    <i class="icon-home"></i>
+
+                    <span class="title">仪表盘</span>
+
+                    <span class="selected"></span>
+
+                </a>
+
+            </li>
+
+            <li class="wechat">
+
+                <a href="javascript:;">
+
+                    <i class="icon-comments"></i>
+
+                    <span class="title">微信管理</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+                    <li>
+
+                        <a href="#/friend">
+                            <i class="icon-group"></i>
+                            粉丝管理</a>
+
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="bussion">
+
+                <a href="javascript:;">
+
+                    <i class="icon-briefcase"></i>
+
+                    <span class="title">业务功能</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+                    <li class="demand">
+                        <a href="#/demand">
+                            <i class="icon-building"></i>
+                            需求单管理</a>
+
+                    </li>
+                    <li class="grad">
+
+                        <a href="#/grad">
+                            <i class="icon-money"></i>
+                            抢单管理</a>
+
+                    </li>
+                    <li class="banner">
+                        <a href="#/banner">
+                            <i class="icon-picture"></i>
+                            轮播图管理</a>
+
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="shopgoods">
+
+                <a href="javascript:;">
+
+                    <i class="icon-retweet"></i>
+
+                    <span class="title">商铺管理</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li class="shops">
+
+                        <a href="#/shops">
+                            <i class="icon-shopping-cart"></i>
+                            店铺管理</a>
+
+                    </li>
+
+                    <li class="goods">
+
+                        <a href="#/goods">
+                            <i class="icon-leaf"></i>
+                            商品管理</a>
+
+                    </li>
+                </ul>
+            </li>
+
+            <li class="money">
+
+                <a href="javascript:;">
+
+                    <i class="icon-money"></i>
+
+                    <span class="title">资金管理</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li class="applywithdrawals">
+
+                        <a href="#/applywithdrawals">
+                            <i class="icon-code-fork"></i>
+                            提现申请</a>
+
+                    </li>
+
+                    <li class="withdrawcash">
+
+                        <a href="#/withdrawcash">
+                            <i class="icon-hdd"></i>
+                            支付提现</a>
+
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="suggest">
+
+                <a href="javascript:;">
+
+                    <i class="icon-building"></i>
+
+                    <span class="title">客户反馈</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li>
+
+                        <a href="#/suggest">
+                            <i class="icon-comment"></i>
+                            建议列表</a>
+
+                    </li>
+                </ul>
+            </li>
+
+            <li class="system">
+
+                <a href="javascript:;">
+
+                    <i class="icon-cogs"></i>
+
+                    <span class="title">系统管理</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li class="user">
+
+                        <a href="#/user">
+                            <i class="icon-user"></i>
+                            用户管理</a>
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- END SIDEBAR MENU -->
+
+    </div>
+
+    <!-- END SIDEBAR -->
+
+    <!-- BEGIN PAGE -->
+
+    <div class="page-content">
+
+        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+        <div id="portlet-config" class="modal hide">
+
+            <div class="modal-header">
+
+                <button data-dismiss="modal" class="close" type="button"></button>
+
+                <h3>弹框</h3>
+
+            </div>
+
+            <div class="modal-body">
+
+                弹框
+
+            </div>
+
+        </div>
+
+        <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+        <!-- BEGIN PAGE CONTAINER-->
+
+        <div class="container-fluid" ng-view>
+
+
+        </div>
+
+        <!-- END PAGE CONTAINER-->
+
+    </div>
+
+    <!-- END PAGE -->
+
+</div>
+
+<!-- END CONTAINER -->
+
+<!-- BEGIN FOOTER -->
+
+<div class="footer">
+
+    <div class="footer-inner">
+
+        2016-2017 &copy; fonbest.com. Admin Manager.
+
+    </div>
+
+    <div class="footer-tools">
+
+			<span class="go-top">
+
+			<i class="icon-angle-up"></i>
+
+			</span>
+
+    </div>
+
+</div>
+
+<div id="confirmDailog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3"
+     aria-hidden="true"></div>
+<div id="tipDialog" class="portlet-body"
+     style="position: fixed;top: 50px;z-index: 10000;width: 800px;margin-left: 420px; ;"></div>
+
+<!-- END FOOTER -->
+
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+<!-- BEGIN CORE PLUGINS -->
+
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+<script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap.js" type="text/javascript"></script>
+
+
+<!--[if lt IE 9]>
+
+<script src="media/js/excanvas.min.js"></script>
+
+<script src="media/js/respond.min.js"></script>
+
+<![endif]-->
+
+<script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+<!-- END CORE PLUGINS -->
+
+<script src="media/js/angular.js" type="text/javascript"></script>
+
+<script src="media/js/angular-route.js" type="text/javascript"></script>
+
+<script src="media/controllers/indexController.js" type="text/javascript"></script>
+
+<script src="media/controllers/common.js" type="text/javascript"></script>
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="media/js/app.js" type="text/javascript"></script>
+
+<script src="media/js/index.js" type="text/javascript"></script>
+
+<!-- END PAGE LEVEL SCRIPTS -->
+
+<script>
+
+    jQuery(document).ready(function () {
+        $comm.checklogin();
+
+        App.init(); // initlayout and core plugins
+
+        Index.init();
+    });
+
+</script>
+
+
+</body>
+
+<!-- END BODY -->
+
+</html>

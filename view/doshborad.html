@@ -1,0 +1,373 @@
+<!-- BEGIN CHART PLUGINS -->
+<script src="media/js/jquery.vmap.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.flot.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.sparkline.min.js" type="text/javascript"></script>
+<!-- END CHART PLUGINS -->
+
+<!-- BEGIN PAGE HEADER-->
+
+<div class="row-fluid">
+
+    <div class="span12">
+
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+
+        <h3 class="page-title">
+
+            仪表盘
+
+        </h3>
+
+        <ul class="breadcrumb">
+
+            <li>
+
+                <i class="icon-home"></i>
+
+                <a href="index.html">首页</a>
+
+                <i class="icon-angle-right"></i>
+
+            </li>
+
+            <li><a href="#">仪表盘</a></li>
+
+        </ul>
+
+        <!-- END PAGE TITLE & BREADCRUMB-->
+
+    </div>
+
+</div>
+
+<!-- END PAGE HEADER-->
+
+<div id="dashboard">
+
+    <div class="row-fluid">
+
+        <div class="span3 responsive" data-tablet="span6" data-desktop="span3">
+
+            <div class="dashboard-stat blue">
+
+                <div class="visual">
+
+                    <i class="icon-comments"></i>
+
+                </div>
+
+                <div class="details">
+
+                    <div class="number wechat_friend_count">
+
+                        <!--1349-->
+
+                    </div>
+
+                    <div class="desc">
+
+                        微信粉丝
+
+                    </div>
+
+                </div>
+
+                <a class="more" href="#/friend">
+
+                    更多 <i class="m-icon-swapright m-icon-white"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="span3 responsive" data-tablet="span6" data-desktop="span3">
+
+            <div class="dashboard-stat green">
+
+                <div class="visual">
+
+                    <i class="icon-shopping-cart"></i>
+
+                </div>
+
+                <div class="details">
+
+                    <div class="number demand_count">
+                        <!--549-->
+                    </div>
+
+                    <div class="desc">需求单总数</div>
+
+                </div>
+
+                <a class="more" href="#/demand">
+
+                    更多 <i class="m-icon-swapright m-icon-white"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="span3 responsive" data-tablet="span6  fix-offset" data-desktop="span3">
+
+            <div class="dashboard-stat purple">
+
+                <div class="visual">
+
+                    <i class="icon-globe"></i>
+
+                </div>
+
+                <div class="details">
+
+                    <div class="number grad_count">
+                        <!--12-->
+                    </div>
+
+                    <div class="desc">抢单总数</div>
+
+                </div>
+
+                <a class="more" href="#/grad">
+
+                    更多 <i class="m-icon-swapright m-icon-white"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="span3 responsive" data-tablet="span6" data-desktop="span3">
+
+            <div class="dashboard-stat yellow">
+
+                <div class="visual">
+
+                    <i class="icon-bar-chart"></i>
+
+                </div>
+
+                <div class="details">
+
+                    <div class="number money_count">
+                        <!--21,123-->
+                    </div>
+
+                    <div class="desc">交易资金</div>
+
+                </div>
+
+                <a class="more" href="#/withdrawcash">
+
+                    更多 <i class="m-icon-swapright m-icon-white"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="row-fluid">
+
+        <div class="span6">
+
+            <!-- BEGIN PORTLET-->
+
+            <div class="portlet solid bordered light-grey">
+
+                <div class="portlet-title">
+
+                    <div class="caption"><i class="icon-bar-chart"></i>每日需求单数量统计</div>
+
+                </div>
+
+                <div class="portlet-body">
+
+                    <div id="site_statistics_loading">
+
+                        <img src="media/image/loading.gif" alt="loading"/>
+
+                    </div>
+
+                    <div id="site_statistics_content" class="hide">
+
+                        <div id="site_statistics" class="chart"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- END PORTLET-->
+
+        </div>
+
+        <div class="span6">
+
+            <!-- BEGIN PORTLET-->
+
+            <div class="portlet solid light-grey bordered">
+
+                <div class="portlet-title">
+
+                    <div class="caption"><i class="icon-bullhorn"></i>每日抢单数量统计</div>
+
+                    <!--<div class="tools">-->
+
+                    <!--<div class="btn-group pull-right" data-toggle="buttons-radio">-->
+
+                    <!--<a href="" class="btn blue mini active">Users</a>-->
+
+                    <!--<a href="" class="btn blue mini">Orders</a>-->
+
+                    <!--</div>-->
+
+                    <!--</div>-->
+
+                </div>
+
+                <div class="portlet-body">
+
+                    <div id="site_activities_loading">
+
+                        <img src="media/image/loading.gif" alt="loading"/>
+
+                    </div>
+
+                    <div id="site_activities_content" class="hide">
+
+                        <div id="site_activities" class="chart"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- END PORTLET-->
+
+            <!-- BEGIN PORTLET-->
+
+            <!--<div class="portlet solid bordered light-grey">-->
+
+            <!--<div class="portlet-title">-->
+
+            <!--<div class="caption"><i class="icon-signal"></i>Server Load</div>-->
+
+            <!--<div class="tools">-->
+
+            <!--<div class="btn-group pull-right" data-toggle="buttons-radio">-->
+
+            <!--<a href="" class="btn red mini active">-->
+
+            <!--<span class="hidden-phone">Database</span>-->
+
+            <!--<span class="visible-phone">DB</span></a>-->
+
+            <!--<a href="" class="btn red mini">Web</a>-->
+
+            <!--</div>-->
+
+            <!--</div>-->
+
+            <!--</div>-->
+
+            <!--<div class="portlet-body">-->
+
+            <!--<div id="load_statistics_loading">-->
+
+            <!--<img src="media/image/loading.gif" alt="loading"/>-->
+
+            <!--</div>-->
+
+            <!--<div id="load_statistics_content" class="hide">-->
+
+            <!--<div id="load_statistics" style="height:108px;"></div>-->
+
+            <!--</div>-->
+
+            <!--</div>-->
+
+            <!--</div>-->
+
+            <!-- END PORTLET-->
+
+        </div>
+
+    </div>
+
+    <div class="row-fluid">
+
+        <div class="span12">
+
+            <!-- BEGIN PORTLET-->
+
+            <div class="portlet solid bordered light-grey">
+
+                <div class="portlet-title">
+
+                    <div class="caption"><i class="icon-bar-chart"></i>每日佣金统计</div>
+
+                </div>
+
+                <div class="portlet-body">
+
+                    <div id="commission_statistics_loading">
+
+                        <img src="media/image/loading.gif" alt="loading"/>
+
+                    </div>
+
+                    <div id="commission_statistics_content" class="hide">
+
+                        <div id="commission_statistics" class="chart"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- END PORTLET-->
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="clearfix"></div>
+
+<div class="row-fluid">
+
+
+</div>
+
+</div>
+
+
+<script src="media/js/admin/doshborad.js" type="text/javascript"></script>
+<script>
+    jQuery(document).ready(function () {
+        doshboard.initCount();
+
+        doshboard.initCharts();
+
+        doshboard.initMiniCharts();
+
+    });
+</script>
